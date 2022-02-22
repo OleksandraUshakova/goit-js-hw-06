@@ -9,9 +9,9 @@ function onInputChange(event){
     console.log(event.currentTarget.value);
 }
 function onOutputChange(event){
-if(event.currentTarget.value ===""){
-    output.textContent = "Anonymous"; 
+if(event.target.value.trim() ===""){
+    output.textContent = "Anonymous";
+    return; 
 }
-else{
-    output.textContent = event.currentTarget.value;
-}}
+    output.textContent = event.target.value;
+}
